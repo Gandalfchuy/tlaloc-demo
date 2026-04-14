@@ -1,0 +1,318 @@
+:root {
+    --crema: #F5F5DC;
+    --verde: #006847; /* Verde Bandera México */
+    --oscuro: #1a1a1a;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blanco);
+    color: var(--oscuro);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-center { text-align: center; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: var(--crema);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--verde);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--oscuro);
+    margin-left: 2rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--verde);
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/tlaloc_012.webp) center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--verde);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background: #004d35;
+    transform: translateY(-3px);
+}
+
+/* Sections */
+.section {
+    padding: 5rem 10%;
+}
+
+.bg-cream { background-color: var(--crema); }
+
+.grid-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    padding: 2rem;
+    border: 1px solid var(--verde);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+/* Pasarela (Gallery) */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    filter: grayscale(30%);
+    transition: 0.5s;
+}
+
+.gallery-item:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* Form */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+footer {
+    background: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 2.2rem; }
+}
+/* Testimonios */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.review-card {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 104, 71, 0.1); /* Sombra con un toque de tu verde */
+    text-align: center;
+    border-top: 4px solid var(--verde);
+    transition: transform 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #FFD700; /* Color oro para las estrellas */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.review-author {
+    font-weight: bold;
+    color: var(--oscuro);
+}
+
+.review-source {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* Carrusel Pasarela */
+.carousel-container {
+    position: relative;
+    max-width: 800px; /* Ancho máximo del carrusel */
+    margin: 2rem auto 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%; /* Cada slide ocupa el 100% del contenedor */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-slide figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 104, 71, 0.8); /* Fondo verde translúcido */
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Botones del Carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--verde);
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background 0.3s, color 0.3s;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }
+
+/* Navegación por puntos (Dots) */
+.carousel-nav {
+    position: absolute;
+    bottom: 60px; /* Por encima del figcaption */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active, .dot:hover {
+    background: var(--blanco);
+}
+
+/* Ajuste Móvil Carrusel */
+@media (max-width: 768px) {
+    .carousel-slide img { height: 350px; }
+    .carousel-btn { padding: 0.8rem; font-size: 1.2rem; }
+}

@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ShoeStore",
+  "name": "Tlaloc Zapatería",
+  "image": "https://tusitio.com/img/fachada-tienda.jpg", 
+  "@id": "https://tusitio.com",
+  "url": "https://tusitio.com",
+  "telephone": "+527771234567",
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "24"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Guerrero #100, Colonia Centro",
+    "addressLocality": "Cuernavaca",
+    "addressRegion": "Morelos",
+    "postalCode": "62000",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.9221,
+    "longitude": -99.2347
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "11:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/tlaloczapateria",
+    "https://www.instagram.com/tlaloczapateria"
+  ]
+}
